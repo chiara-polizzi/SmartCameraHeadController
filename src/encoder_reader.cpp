@@ -19,6 +19,11 @@ void simulaImpulsoElettricoDalSensore() {
     static std::ifstream fileSensore("data/sensor_log.csv");
     std::string linea;
 
+    if (!fileSensore.is_open()) {
+        std::cout << "[ALLARME HARDWARE] Sensore scollegato! Impossibile leggere il CSV." << std::endl;
+        return;
+    }
+
     if (fileSensore.is_open() && std::getline(fileSensore, linea)) {
         int posizioneReale = std::stoi(linea);
         
