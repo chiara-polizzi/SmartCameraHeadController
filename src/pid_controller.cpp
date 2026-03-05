@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cmath>
 
+/**
 class PIDController {
 private:
     float Kp, Ki, Kd;
@@ -40,6 +41,7 @@ public:
         return P + I + D;
     }
 };
+**/
 
 /**
 int main() {

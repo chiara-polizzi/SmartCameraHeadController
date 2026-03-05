@@ -1,7 +1,6 @@
 #include <iostream>
 // Includiamo il nostro "menu" e il file del PID
-#include "camera_core.h" 
-#include "pid_controller.cpp" // In un progetto enorme si separa anche questo, ma per ora lo includiamo direttamente
+#include "../include/camera_core.h"
 
 int main() {
     std::cout << "=======================================" << std::endl;
