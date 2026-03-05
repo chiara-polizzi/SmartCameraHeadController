@@ -1,16 +1,23 @@
 #include <iostream>
+#include <fstream>
+#include <string>
 
-// Simula la lettura fisica da un registro hardware del motore
-int read_hardware_register(int address) {
-    // In un firmware reale qui useremmo i puntatori per leggere la memoria fisica.
-    // Per il nostro test, facciamo finta che il motore sia a 180 gradi.
-    return 180; 
-}
-
-// Funzione sicura: restituisce un intero per VALORE, non per indirizzo!
+// Simuliamo la lettura hardware leggendo dal nostro file CSV
 int ottieniPosizioneEncoder() {
-    int posizione = read_hardware_register(0x40001000); 
-    return posizione; 
+    // Usiamo la keyword 'static' in modo che il file rimanga aperto
+    // e ricordi a che riga era arrivato tra una chiamata e l'altra della funzione.
+    static std::ifstream fileSensore("data/sensor_log.csv");
+    std::string linea;
+
+    // Se il file è aperto e riusciamo a leggere una nuova riga...
+    if (fileSensore.is_open() && std::getline(fileSensore, linea)) {
+        // Convertiamo la stringa di testo (es. "45") in un numero intero
+        return std::stoi(linea); 
+    } else {
+        // Se abbiamo finito le righe del file, avvisiamo il sistema
+        std::cout << "[HARDWARE WARN] Nessun nuovo dato dall'encoder." << std::endl;
+        return 180; // Restituiamo una posizione di sicurezza
+    }
 }
 
 /** 
