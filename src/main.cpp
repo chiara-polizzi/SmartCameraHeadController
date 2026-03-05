@@ -1,3 +1,22 @@
+#include <QApplication>
+#include "../include/camera_visualizer.h"
+#include <iostream>
+
+int main(int argc, char *argv[]) {
+    std::cout << "Avvio Modulo Grafico Qt..." << std::endl;
+    
+    // Inizializziamo l'applicazione grafica di Qt
+    QApplication app(argc, argv);
+    
+    // Creiamo la nostra finestra principale e la mostriamo
+    CameraVisualizer finestra;
+    finestra.show();
+    
+    // Passiamo il controllo del programma a Qt (che gestirà la finestra finché non la chiudi)
+    return app.exec();
+}
+
+/**
 #include <iostream>
 // Includiamo il nostro "menu" e il file del PID
 #include "../include/camera_core.h"
@@ -21,6 +40,7 @@ int main() {
     
     std::cout << "\n--- Inizio Movimento Fisico ---" << std::endl;
     
+    
     // Simuliamo 5 cicli del microcontrollore (il "while(true)" del firmware)
     for(int ciclo = 1; ciclo <= 5; ciclo++) {
         // A. Leggiamo il sensore hardware
@@ -40,3 +60,4 @@ int main() {
     std::cout << "Spegnimento sistema." << std::endl;
     return 0;
 }
+**/

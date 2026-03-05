@@ -21,6 +21,8 @@ set(SOURCES
     src/encoder_reader.cpp
     src/motor_driver.cpp
     src/pathfinder.cpp
+    src/camera_visualizer.cpp
+    include/camera_visualizer.h
 )
 
 # Creiamo l'eseguibile finale
