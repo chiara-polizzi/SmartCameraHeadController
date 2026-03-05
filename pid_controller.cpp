@@ -41,6 +41,7 @@ public:
     }
 };
 
+/**
 int main() {
     std::cout << "--- Avvio Simulazione Movimento Telecamera ---" << std::endl;
     
@@ -67,3 +68,4 @@ int main() {
     
     return 0;
 }
+**/

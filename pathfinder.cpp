@@ -53,6 +53,7 @@ void calcolaPercorso(Coordinate start, Coordinate target) {
     std::cout << "Percorso validato e salvato nella memoria statica del controller." << std::endl;
 }
 
+/** 
 int main() {
     std::cout << "--- Avvio Modulo Pathfinding ---" << std::endl;
     
@@ -67,3 +68,4 @@ int main() {
 
     return 0;
 }
+**/

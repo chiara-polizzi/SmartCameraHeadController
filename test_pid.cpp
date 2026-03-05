@@ -56,6 +56,7 @@ void test_pid_vibrazione_sovrastima() {
     std::cout << "[PASS] test_pid_vibrazione_sovrastima superato (il sistema va in overshoot come calcolato)." << std::endl;
 }
 
+/**
 int main() {
     std::cout << "--- Avvio Unit Test: Modulo PID ---" << std::endl;
     
@@ -65,3 +66,4 @@ int main() {
     std::cout << "TUTTI GLI UNIT TEST SONO PASSATI CON SUCCESSO! Il firmware e' matematicamente stabile." << std::endl;
     return 0;
 }
+**/

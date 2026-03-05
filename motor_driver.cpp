@@ -18,6 +18,7 @@ void impostaVelocitaMotore(uint32_t velocita) {
     std::cout << "[FIRMWARE] Inviato comando al motore: " << velocita << " RPM" << std::endl;
 }
 
+/** 
 int main() {
     std::cout << "--- Avvio Modulo Attuatori (Motori DC/Brushless) ---" << std::endl;
     
@@ -27,3 +28,4 @@ int main() {
     
     return 0;
 }
+**/

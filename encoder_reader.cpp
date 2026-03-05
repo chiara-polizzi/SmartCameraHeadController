@@ -13,6 +13,7 @@ int ottieniPosizioneEncoder() {
     return posizione; 
 }
 
+/** 
 int main() {
     // Salviamo il valore in modo sicuro
     int posAttuale = ottieniPosizioneEncoder();
@@ -28,3 +29,4 @@ int main() {
     
     return 0;
 }
+**/
